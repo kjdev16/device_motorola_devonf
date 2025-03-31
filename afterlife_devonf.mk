@@ -28,6 +28,4 @@ AFTERLIFE_GAPPS := false
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    DeviceName=devonf_g_sys \
-    BuildDesc="devonf_g_sys-user 14 U1TNS34M.82-12-7-16 97b8f release-keys" \
-    BuildFingerprint=motorola/devonf_g_sys/devonf:14/U1TNS34M.82-12-7-16/97b8f:user/release-keys
+    DeviceName=devonf_g_sys
