@@ -225,6 +225,30 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
 
+PRODUCT_PACKAGES += \
+    fstab.mt6855 \
+    fstab.mt6855.ramdisk \
+    fstab.mt6855.vendor_ramdisk \
+    init_connectivity.rc \
+    init.connectivity.common.rc \
+    init.mmi.chipset.rc \
+    init.mmi.overlay.rc \
+    init.mmi.rc \
+    init.modem.rc \
+    init.mt6855.rc \
+    init.mt6855.power.rc \
+    init.mt6855.usb.rc \
+    init.mtkgki.rc \
+    init.oem.hw.sh \
+    init.project.rc \
+    init.sensor_2_0.rc \
+    ueventd.mt6855.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/fstab.mt6855:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6855 \
+    $(LOCAL_PATH)/init/init.recovery.mt6855.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6855.rc \
+    $(LOCAL_PATH)/init/init.recovery.mt6855.rc:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/init.recovery.mt6855.rc
+
 # Keylayouts
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/idc/,$(TARGET_COPY_OUT_VENDOR)/usr/idc) \
@@ -405,31 +429,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio@1.6.vendor
-
-# Rootdir
-PRODUCT_PACKAGES += \
-    fstab.mt6855 \
-    fstab.mt6855.ramdisk \
-    fstab.mt6855.vendor_ramdisk \
-    init_connectivity.rc \
-    init.connectivity.common.rc \
-    init.mmi.chipset.rc \
-    init.mmi.overlay.rc \
-    init.mmi.rc \
-    init.modem.rc \
-    init.mt6855.rc \
-    init.mt6855.power.rc \
-    init.mt6855.usb.rc \
-    init.mtkgki.rc \
-    init.oem.hw.sh \
-    init.project.rc \
-    init.sensor_2_0.rc \
-    ueventd.mt6855.rc
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6855:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6855 \
-    $(LOCAL_PATH)/rootdir/etc/init.recovery.mt6855.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6855.rc \
-    $(LOCAL_PATH)/rootdir/etc/init.recovery.mt6855.rc:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/init.recovery.mt6855.rc
 
 # Sensors
 PRODUCT_PACKAGES += \
