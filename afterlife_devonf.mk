@@ -11,15 +11,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/motorola/devonf/device.mk)
 
-# Inherit some common PixelOS stuff.
-$(call inherit-product, vendor/custom/config/common_full_phone.mk)
+# Inherit some common Afterlife stuff.
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := custom_devonf
+PRODUCT_NAME := afterlife_devonf
 PRODUCT_DEVICE := devonf
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := moto g73 5G 
+
+AFTERLIFE_MAINTAINER := user@linux
+TARGET_SUPPORTS_BLUR := true
+AFTERLIFE_GAPPS := false
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
