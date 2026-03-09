@@ -73,7 +73,6 @@ PRODUCT_PACKAGES += \
     audioclient-types-aidl-cpp.vendor \
 
 PRODUCT_PACKAGES += \
-    BesLoudness \
     MtkInCallService
 
 PRODUCT_COPY_FILES += \
@@ -211,7 +210,6 @@ PRODUCT_PACKAGES += \
     android.hardware.lights-service.devonf
 
 # Media
-
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(DEVICE_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
