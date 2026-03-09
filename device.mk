@@ -73,7 +73,7 @@ PRODUCT_PACKAGES += \
     audioclient-types-aidl-cpp.vendor \
 
 PRODUCT_PACKAGES += \
-    DolbyManager \
+    BesLoudness \
     MtkInCallService
 
 PRODUCT_COPY_FILES += \
