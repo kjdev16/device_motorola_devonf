@@ -113,7 +113,6 @@ $(call add-product-dex-preopt-module-config,MotoSignatureApp,disable)
 
 # Display
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0.vendor \
     libhwc2on1adapter \
     libhwc2onfbadapter
 
@@ -331,8 +330,8 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Power Off Alarm
-PRODUCT_PACKAGES += \
-    PowerOffAlarm
+#PRODUCT_PACKAGES += \
+ #   PowerOffAlarm
 
 # Sensors
 PRODUCT_PACKAGES += \
